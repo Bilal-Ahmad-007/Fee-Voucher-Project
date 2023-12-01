@@ -122,7 +122,7 @@ def Semester_Voucher():
         total_fee = int(course_fee)
 
         # Create fee voucher text
-        voucher_text = f"Student Name: {student_name}\nCourse Fee: {course_fee} Rs.\nTotal Fee: {total_fee} Rs."
+        voucher_text = f"Student Name: {student_name}\nSemester Fee: {course_fee} Rs.\nTotal Fee: {total_fee} Rs."
 
         # Display the voucher
         result_label.config(text=voucher_text)
@@ -137,7 +137,7 @@ def Semester_Voucher():
     entry_name = tk.Entry(root)
     entry_name.grid(row=1, column=1, padx=10, pady=10)
 
-    label_course_fee = tk.Label(root, text="Course Fee:")
+    label_course_fee = tk.Label(root, text="Semester Fee:")
     label_course_fee.grid(row=2, column=0, padx=10, pady=10, sticky=tk.W)
 
     entry_course_fee = tk.Entry(root)
@@ -161,7 +161,7 @@ def Repeat_course():
         amount = entry_amount.get()
 
         # Assuming a simple printout for demonstration purposes
-        voucher_text = f"Fee Voucher\n\nStudent Name: {student_name}\nCourse: {course}\nAmount: {amount}Rs."
+        voucher_text = f"Fee Voucher\n\nStudent Name: {student_name}\nSemeter: {course}\nAmount: {amount}Rs."
 
         # Display the fee voucher in a new window
         voucher_window = tk.Toplevel(root)
@@ -196,14 +196,6 @@ def Repeat_course():
     generate_button.grid(row=3, column=0, columnspan=2, pady=20)
 
 
-def edit_cut():
-    print("Cut")
-
-def edit_copy():
-    print("Copy")
-
-def edit_paste():
-    print("Paste")
 
 # Create the main window
 root = tk.Tk()
@@ -244,11 +236,7 @@ file_menu.add_separator()
 file_menu.add_command(label="Exit", command=root.destroy)
 
 # Create Edit menu
-edit_menu = tk.Menu(menu_bar, tearoff=0)
-menu_bar.add_cascade(label="Edit", menu=edit_menu)
-edit_menu.add_command(label="Cut", command=edit_cut)
-edit_menu.add_command(label="Copy", command=edit_copy)
-edit_menu.add_command(label="Paste", command=edit_paste)
+
 
 # Run the main loop
 
