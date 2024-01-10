@@ -1,4 +1,4 @@
-# Institute_Managment_by_Syed_M_Mudasir (F21BSEEN1E02007)
+# Bilal Ahmad (F21BSEEN1E02091) fee- voucher
 
 # Discription :
     - This appliction is made by using Tkinter .
